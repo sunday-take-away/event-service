@@ -1,12 +1,12 @@
 spring:
   rabbitmq:
-    host: 127.0.0.1
+    host: message-broker
     port: 5672
     username: service
     password: SnackAttack
 
   influxdb:
-    url: http://localhost:8086
+    url: http://timeseries-db:8086
     username: service
     password: TakeASnack
     database: events
