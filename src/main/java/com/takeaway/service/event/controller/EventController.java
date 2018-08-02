@@ -18,9 +18,9 @@ public class EventController {
     @Autowired
     private EventService eventService;
 
-    @RequestMapping("/event/employee/{id}")
-    public List<EventPerformed>  event(@PathVariable String id) {
-        logger.debug("requesting events for id:" + id);
-        return eventService.findAllEventsForTypeAndId("employee", id);
+    @RequestMapping("/event/{type}/{id}")
+    public List<EventPerformed>  event(@PathVariable String type, @PathVariable String id) {
+        logger.debug(String.format("requesting events for type:'%s' id:'%s'", type, id));
+        return eventService.findAllEventsForTypeAndId(type, id);
     }
 }
