@@ -1,0 +1,18 @@
+# java
+target
+*.class
+*.log
+
+# mvn specific
+.cache
+.history
+.lib/
+dist/*
+target/
+
+# intellij
+.idea/
+*.iml
+*.iws
+*~
+

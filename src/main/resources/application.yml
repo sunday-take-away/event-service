@@ -1,0 +1,26 @@
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: service
+    password: SnackAttack
+
+  influxdb:
+    url: http://localhost:8086
+    username: service
+    password: TakeASnack
+    database: events
+    retention-policy: autogen
+    connect-timeout: 10
+    read-timeout: 30
+    write-timeout: 10
+
+logging:
+  pattern:
+    console: '%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
+  level:
+    root: WARN
+    com:
+      takeaway:
+        service:
+          event: DEBUG
